@@ -48,11 +48,11 @@ const Design = () => {
             <div className="container">
                 <h1>
                     {/* quote is  represented by array of objects has only one object inside array so to get first array which is obj & getting its quote value*/}
-                    <span>{quote?quote[0].quote:''}</span>
+                    <span>{quote?(quote[0].quote):''}</span>
                 </h1>
                 <br/>
                 {/* similar but for author */}
-                <h4>&mdash;J{quote?quote[0].author:''}</h4>
+                <h4>&mdash;{quote?quote[0].author:''}</h4>
             </div>
         </div>
     )

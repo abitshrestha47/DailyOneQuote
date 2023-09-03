@@ -6,6 +6,7 @@ require('dotenv').config();
 const key=process.env.key;
 
 quoteRouter.get('/',(req,res)=>{
+    console.log('ffd');
     request.get({
         url:'https://api.api-ninjas.com/v1/quotes?category='+category,
         headers:{
