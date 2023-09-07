@@ -4,7 +4,6 @@ const request=require('request');
 require('dotenv').config();
 const key=process.env.key;
 const URL=process.env.url;
-console.log(URL);
 
 quoteRouter.get('/',(req,res)=>{
     request.get({

@@ -25,7 +25,6 @@ const Design = () => {
     const getQuote = async () => {
         try {
             const response = await axios.get(`http://localhost:2000/getQuote`)
-            console.log(response);
             const responseData=response.data;
             if(responseData.code==='ENOTFOUND'){
                 setError('Internet');
@@ -33,13 +32,9 @@ const Design = () => {
             }
             else{
                 resetError();
-                const responseData=response.data;
-                console.log(responseData);
                 setQuote(response.data);
                 const todayDate = new Date().toISOString();
                 const newQuote = JSON.parse(response.data);
-                console.log(typeof (newQuote[0]));
-                console.log(newQuote);
                 newQuote[0].todayDate0 = todayDate;
                 console.log(newQuote);
                 const newQuoteString = JSON.stringify(newQuote);
