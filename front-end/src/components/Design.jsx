@@ -7,7 +7,7 @@ const Design = () => {
     //variable for setting the localstorage data
     var quoteParsed;
 
-    //setting localstorage assign the value with variable quote&date
+    //setting localstorage assign the value with variable quote&dat
     if (localStorage.length > 0) {
         const initialQuote = localStorage.getItem('quote&date');
         quoteParsed = JSON.parse(initialQuote);
